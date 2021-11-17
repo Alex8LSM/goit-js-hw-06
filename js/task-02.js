@@ -6,12 +6,12 @@ const ingredients = [
   'Herbs',
   'Condiments',
 ];
-let string = '';
+const myArray=[];
 const list = document.getElementById('ingredients');
 ingredients.forEach(element => {
   const item = document.createElement('li');
   item.textContent = element;
   item.className = 'item';
-  string += item.outerHTML;
+  myArray.push(item);
 });
-list.innerHTML =string;
+list.append(...myArray)
